@@ -91,7 +91,7 @@ header div.header-title p{
 header div.header-title p#button{
     width: 180px;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 70px;
     padding: 7px;
     font-weight: bolder;
     font-style: normal;
@@ -108,7 +108,7 @@ header div.header-title p#button:hover{
 main{
     background-color: #EACE5D;
     width: 100%;
-    max-height: 350px;
+    max-height: 500px;
     position: absolute;
     box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.329) inset;
 }
@@ -116,20 +116,26 @@ main{
 main div.recipes{
     width: 85%;
     height: 85%;
-    margin: 25px auto;
+    margin: 50px auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main div.recipes div.recipe-box{
-    max-width: 170px;
-    max-height: 200px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 25px;
     margin: auto;
-    margin-left: 5px;
-    align-items: center;
 }
 
 main div.recipes div.recipe-box img{
     width: 60%;
+    transition: width 0.5s;
+}
+
+main div.recipes div.recipe-box img:hover{
+    width: 75%;
+    opacity: 0.8;
+    /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.233); */
 }
