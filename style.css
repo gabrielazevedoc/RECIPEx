@@ -114,7 +114,6 @@ main{
 }
 
 main div.recipes{
-    /* border: 1px solid black; */
     width: 90%;
     height: 90%;
     margin: 25px auto;
@@ -126,11 +125,10 @@ main div.recipes{
 main div.recipes div.recipe-box{
     width: 170px;
     height: 200px;
-    /* border: 1px solid black; */
     margin-top: 25px;
     margin-right: 15px;
 }
 
 main div.recipes div.recipe-box img{
-    width: 100%;
+    width: 70%;
 }
