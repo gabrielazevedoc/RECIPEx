@@ -19,7 +19,7 @@ body{
 
 header{
     height: calc(100vh - 190px);
-    background-color: #6F2E72;
+    background-color: #eee;
     position: relative;
 }
 
@@ -52,12 +52,12 @@ header nav ul{
 }
 
 header nav ul li{
-    color: white;
+    color: #111;
 }
 
 header nav ul li:hover{
-    color: #6F2E72;
-    background-color: white;
+    color: #eee;
+    background-color: #111;
     border-radius: 10px;
     padding: 7px;
 }
@@ -79,12 +79,12 @@ header div.header-title{
 header div.header-title h1{
     font-size: 4.5em;
     letter-spacing: 0.7px;
-    color: white;
+    color: #111;
 }
 
 header div.header-title p{
     margin-top: 8px;
-    color: white;
+    color: #111;
     font-style: italic;
 }
 
@@ -97,7 +97,7 @@ header div.header-title p#button{
     font-style: normal;
     letter-spacing: .01em;
     background-color: #EACE5D;
-    color: #6F2E72;
+    color: #111;
     border-radius: 15px;
 }
 
@@ -108,34 +108,48 @@ header div.header-title p#button:hover{
 main{
     background-color: #EACE5D;
     width: 100%;
-    max-height: 500px;
-    position: absolute;
     box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.329) inset;
+    padding-bottom: 40px;
+}
+
+.headline{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+    letter-spacing: 2px;
 }
 
 main div.recipes{
     width: 85%;
     height: 85%;
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
 }
 
 main div.recipes div.recipe-box{
-    max-width: 150px;
-    max-height: 150px;
+    width: 20%;
     border-radius: 25px;
     margin: auto;
 }
 
 main div.recipes div.recipe-box img{
-    width: 60%;
+    width: 100px;
     transition: width 0.5s;
 }
 
 main div.recipes div.recipe-box img:hover{
-    width: 75%;
-    opacity: 0.8;
-    /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.233); */
+    cursor: ;
+    width: 110px;
+    opacity: 0.85;
+}
+
+#review{
+    background-color: #eee;
+    box-shadow: 0px -6px 6px 1px rgba(0, 0, 0, 0.329);
+    width: 100%;
+
 }
