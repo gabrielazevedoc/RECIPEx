@@ -232,3 +232,17 @@ main div.recipes div.recipe-box img:hover{
 #recipe-content{
     height: 70px;
 }
+
+#submit{
+    width: 60px;
+}
+
+footer{
+    width: 100%;
+    box-shadow: 0px -6px 6px 1px rgba(0, 0, 0, 0.329);
+    color: #eee;
+    background-color: #111;
+    padding: 10px;
+    text-align: center;
+    font-size: .8em;
+}
