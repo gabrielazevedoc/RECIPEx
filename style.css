@@ -227,10 +227,12 @@ main div.recipes div.recipe-box img:hover{
     margin-bottom: 10px;
     border-radius: 5px;
     font-weight: bold;
+    padding: 5px;
 }
 
 #recipe-content{
     height: 70px;
+    text-align: start;
 }
 
 #submit{
@@ -244,5 +246,6 @@ footer{
     background-color: #111;
     padding: 10px;
     text-align: center;
+    font-weight: lighter;
     font-size: .8em;
 }
