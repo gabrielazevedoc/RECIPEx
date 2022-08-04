@@ -27,6 +27,8 @@ header nav{
     display: flex;
     justify-content: space-between;
     height: 50px;
+    /* position: fixed; */
+    /* Ver depois como colocar o nav preso */
 }
 
 a{
@@ -44,7 +46,7 @@ header nav h1{
 header nav ul{
     width: 350px;
     list-style: none;
-    margin-left: 10px;
+    margin-right: 25px;
     margin-top: 15px;
     padding: 5px;
     display: flex;
@@ -60,13 +62,6 @@ header nav ul li:hover{
     background-color: #111;
     border-radius: 10px;
     padding: 7px;
-}
-
-header nav input{
-    height: 20px;
-    margin-top: 15px;
-    margin-right: 20px;
-    border-radius: 4px;
 }
 
 header div.header-title{
@@ -185,13 +180,14 @@ main div.recipes div.recipe-box img:hover{
 
 #contato-container{
     width: 70%;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: auto;
     padding: 40px;
 }
 
 #redes{
+    width: 100%;
     text-align: center;
 }
 
@@ -204,11 +200,12 @@ main div.recipes div.recipe-box img:hover{
 }
 
 .icones img{
-    width: 50px;
+    max-width: 50px;
     padding: 5px;
 }
 
 #formulario{
+    width: 100%;
     padding-left: 100px;
     border-left: 1px solid black;
 }
@@ -232,7 +229,6 @@ main div.recipes div.recipe-box img:hover{
 
 #recipe-content{
     height: 70px;
-    text-align: start;
 }
 
 #submit{
@@ -246,6 +242,45 @@ footer{
     background-color: #111;
     padding: 10px;
     text-align: center;
-    font-weight: lighter;
+    letter-spacing: 1px;
     font-size: .8em;
+}
+
+@media screen and (max-width: 871px){
+
+    header div.header-title p#button {
+        margin-top: 20px;
+    }  
+
+    header div.header-title{
+        margin-top: 50px;
+    }
+
+    #formulario{
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    header{
+        height: calc(100vh - 100px);
+    }
+
+    header nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav h1{
+        display: none;
+    }
+
+    header div.header-title{
+        margin-top: 100px;
+    }
+
+    main div.recipes{
+        grid-template-columns: 1fr;
+    }
 }
