@@ -136,7 +136,7 @@ main div.recipes div.recipe-box img{
 }
 
 main div.recipes div.recipe-box img:hover{
-    cursor: ;
+    cursor: pointer;
     width: 110px;
     opacity: 0.85;
 }
