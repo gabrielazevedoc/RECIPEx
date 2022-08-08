@@ -228,7 +228,8 @@ main div.recipes div.recipe-box img:hover{
 }
 
 #recipe-content{
-    height: 70px;
+    /* height: 70px; */
+    padding-bottom: 70px;
 }
 
 #submit{
