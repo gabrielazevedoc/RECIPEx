@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RECIPEx</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
 </head>
 <body>
   <header>
@@ -76,10 +75,20 @@
         <div id="formulario">
             <p>Se você tem uma receita ou crítica, e queira nos enviar, aqui é o lugar (créditos na página)</p>
             <form action="get">
-                <input type="text" name="nome" placeholder="Nome">
-                <input type="email" name="e-mail" placeholder="E-mail">
-                <input type="text" name="recipe" placeholder="Escreva aqui" id="recipe-content">
-                <input type="submit" id="submit">
+                <div class="form-control">
+                    <input type="text" name="nome" placeholder="Nome" id="nome" class="input">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <small>mensagem de erro</small>
+                </div>
+                <div class="form-control">
+                    <input type="email" name="e-mail" placeholder="E-mail" id="email" class="input">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <small>Mensagem de erro</small>
+                </div>
+                <input type= "file" name="file" id="arquivo-receita" accept=".pdf">
+                <button type="submit" id="submit">Enviar</button>
             </form>
         </div>
     </div>
@@ -89,5 +98,7 @@
     <p>Site feito por Gabriel Azevedo</p>
   </footer>
 
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/334c1ff5ca.js" crossorigin="anonymous"></script>
 </body>
 </html>

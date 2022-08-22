@@ -221,19 +221,47 @@ main div.recipes div.recipe-box img:hover{
 }
 
 #formulario form input{
-    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 15px;
     border-radius: 5px;
     font-weight: bold;
     padding: 5px;
 }
 
-#recipe-content{
-    /* height: 70px; */
-    padding-bottom: 70px;
+.form-control{
+    position: relative;
+}
+
+.input{
+    border: 2px solid #111;
+}
+
+.form-control i{
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small{
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    visibility: hidden;
+
 }
 
 #submit{
-    width: 60px;
+    width: 90px;
+    text-align: center;
+    border: 2px solid #111;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#submit:hover{
+    color: #EACE5D;
+    background-color: #111;
 }
 
 footer{
