@@ -1,315 +1,70 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,100&display=swap');
 
-
-/* Cores utilizadas: 
-    #6F2E72
-    #EACE5D
-    #F2F2F2   */
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: #eee;
-    font-family: 'Roboto', sans-serif;
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 273px;
+
+    position: absolute;
+    height: 86px;
+    left: 2.79%;
+    right: 5.93%;
+    top: 12px;
+    
+}
+
+img#recipelogonav{
+    width: 87.11px;
+    height: 86px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+img#burguernav{
+    width: 20px;
+    height: 20px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 header{
-    height: calc(100vh - 190px);
-    background-color: #eee;
-    position: relative;
-}
-
-header nav{
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    /* position: fixed; */
-    /* Ver depois como colocar o nav preso */
-}
-
-a{
-    text-decoration: none;
-}
-
-header nav h1{
-    margin-top: 10px;
-    margin-left: 20px;
-    color: #EACE5D;
-    padding: 5px;
-    font-size: 30px;
-}
-
-header nav ul{
-    width: 350px;
-    list-style: none;
-    margin-right: 25px;
-    margin-top: 15px;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
-header nav ul li{
-    color: #111;
-}
-
-header nav ul li:hover{
-    color: #eee;
-    background-color: #111;
-    border-radius: 10px;
-    padding: 7px;
-}
-
-header div.header-title{
-    max-width: 90vw;
-    margin: auto;
-    text-align: center;
-    margin-top: 120px;
-}
-
-header div.header-title h1{
-    font-size: 4.5em;
-    letter-spacing: 0.7px;
-    color: #111;
-}
-
-header div.header-title p{
-    margin-top: 8px;
-    color: #111;
-}
-
-header div.header-title p#button{
-    width: 180px;
-    margin: auto;
-    margin-top: 70px;
-    padding: 7px;
-    font-weight: bolder;
-    font-style: normal;
-    letter-spacing: .01em;
-    background-color: #EACE5D;
-    color: #111;
-    border-radius: 15px;
-}
-
-header div.header-title p#button:hover{
-    opacity: 0.8;
-}
-
-main{
-    background-color: #EACE5D;
-    width: 100%;
-    box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.329) inset;
-    padding-bottom: 40px;
-}
-
-.headline{
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    padding: 40px;
-    letter-spacing: 2px;
-}
-
-main div.recipes{
-    width: 85%;
-    height: 85%;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-}
-
-main div.recipes div.recipe-box{
-    width: 20%;
-    border-radius: 25px;
-    margin: auto;
-}
-
-main div.recipes div.recipe-box img{
-    width: 100px;
-    transition: width 0.5s;
-}
-
-main div.recipes div.recipe-box img:hover{
-    cursor: pointer;
-    width: 110px;
-    opacity: 0.85;
-}
-
-#review{
-    background-color: #eee;
-    box-shadow: 0px -6px 6px 1px rgba(0, 0, 0, 0.329);
-    width: 100%;
-}
-
-#review-conteiner{
-    width: 100%;
-    max-height: 500px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 50px;
-}
-
-.review-content{
-    max-width: 100%;
-    align-items: center;
-    padding: 20px;
-}
-
- .review-content img{
-    width: 100%;
-    padding: 5px 0 15px 0;
-}
-
-.review-content h3{
-    padding: 5px;
-}
-
-#contato{
-    width: 100%;
-    padding: 20px;
-    background-color: #EACE5D;
-    box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.329) inset;
-}
-
-#contato-container{
-    width: 70%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: auto;
-    padding: 40px;
-}
-
-#redes{
-    width: 100%;
-    text-align: center;
-}
-
-.icones{
-    padding: 10px;
-}
-
-.icones h2{
-    font-size: 3rem;
-}
-
-.icones img{
-    max-width: 50px;
-    padding: 5px;
-}
-
-#formulario{
-    width: 100%;
-    padding-left: 100px;
-    border-left: 1px solid black;
-}
-
-#formulario p{
-    max-width: 280px;
-}
-
-#formulario form{
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
-}
+    align-items: center;
+    padding: 0px;
+    gap: 18px;
 
-#formulario form input{
-    width: 100%;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    padding: 5px;
-}
-
-.form-control{
-    position: relative;
-}
-
-.input{
-    border: 2px solid #111;
-}
-
-.form-control i{
     position: absolute;
-    top: 6px;
-    right: 10px;
-    visibility: hidden;
+    width: 329px;
+    height: 222px;
+    left: calc(50% - 329px/2 - 0.5px);
+    top: 133px;
 }
 
-.form-control small{
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    visibility: hidden;
+h1{
+    width: 293px;
+    height: 112px;
 
-}
-
-#submit{
-    width: 90px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 55px;
+    align-items: center;
     text-align: center;
-    border: 2px solid #111;
-    border-radius: 5px;
-    padding: 3px;
-}
-
-#submit:hover{
-    color: #EACE5D;
-    background-color: #111;
-}
-
-footer{
-    width: 100%;
-    box-shadow: 0px -6px 6px 1px rgba(0, 0, 0, 0.329);
-    color: #eee;
-    background-color: #111;
-    padding: 10px;
-    text-align: center;
-    letter-spacing: 1px;
-    font-size: .8em;
-}
-
-@media screen and (max-width: 871px){
-
-    header div.header-title p#button {
-        margin-top: 20px;
-    }  
-
-    header div.header-title{
-        margin-top: 50px;
-    }
-
-    #formulario{
-        border-left: none;
-    }
-}
-
-@media screen and (max-width: 768px){
-
-    header{
-        height: calc(100vh - 100px);
-    }
-
-    header nav{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav h1{
-        display: none;
-    }
-
-    header div.header-title{
-        margin-top: 100px;
-    }
-
-    main div.recipes{
-        grid-template-columns: 1fr;
-    }
+    color: #383736;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }

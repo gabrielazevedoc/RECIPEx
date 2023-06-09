@@ -2,103 +2,58 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RECIPEx</title>
+    <title>RecipeX</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+
     <nav>
-        <h1>RECIPEx</h1>
-        
-        <ul>
-            <a href="#">
-                <li>Home</li>
-            </a>
-            <a href="#main">
-                <li>Receitas</li>
-            </a>
-            <a href="#review">
-                <li>Review</li>
-            </a>
-            <a href="#contato">
-                <li>Contato</li>
-            </a>
-        </ul>
+        <img src="./midias/Recipex_logo.png" alt="Recipex logo" id="recipelogonav">
+        <img src="./midias/Menuhamburguer.png" alt="Menu hamburguer" id="burguernav">
     </nav>
 
-    <div class="header-title">
-        <h1>Bem vindo ao RECIPEx!</h1>
-        <p>Nesse site você encontra as melhores receitas e reviews.</p>
-        <a href="">
-            <p id="button">Nos conheça melhor</p>
-        </a>
-    </div>
-  </header>  
+    <header>
+        <h1>Bem vindo ao RecipeX</h1>
+        <p>Nesse site você encontra as melhores receitas e ferramentas para a sua cozinha</p>
+        <button>Entrar</button>
+    </header>
 
-  <main>
-    <div class="headline">receitas</div>
-    <div class="recipes">
-        <div class="recipe-box"><img src="midias/meat (1).png" alt="carnes"></div>
-        <div class="recipe-box"><img src="midias/chicken-leg (1).png" alt="aves"></div>
-        <div class="recipe-box"><img src="midias/fish (1).png" alt="peixes"></div>
-        <div class="recipe-box"><img src="midias/salad.png" alt="saladas"></div>
-        <div class="recipe-box"><img src="midias/sweets.png" alt="sobremesas"></div>
-    </div>
-  </main>
-
-  <section id="review">
-    <div class="headline">reviews</div>
-    <div id="review-conteiner">
-        <div class="review-content">
-            <h3>Restaurantes</h3>
-            <img src="midias/restaurante.jpg" alt="">
+    <main>
+        <div class="sections">
+            <h2>Receitas</h2>
         </div>
-        <div class="review-content">
-            <h3>Hotéis</h3>
-            <img src="midias/hotel.jpg" alt="">
+        <div class="sections">
+            <h2>Ferramentas</h2>
         </div>
-    </div>
-  </section>
+        <div class="sections">
+            <h2>Calculadora de eventos</h2>
+        </div>
+        <div class="sections">
+            <h2>Reviews</h2>
+        </div>
+    </main>
 
-  <section id="contato">
-    <div id="contato-container">
-        <div id="redes">
-            <h2>RECIPEx</h2>
-            <div class="icones">
-                <a href="#"><img src="midias/facebook.png" alt="icone facebook"> </a>
-                <a href="#"><img src="midias/instagram.png" alt="icone instagram"></a>
-                <a href="#"><img src="midias/twitter.png" alt="icone twitter"></a>
+    <footer>
+        <div id="logofooter">
+            <img src="./midias/Recipex_logo.png" alt="Recipex logo">
+        </div>
+        <div id="socialmedia">
+            <div>
+                <img src="./midias/facebook.png" alt="facebook logo">
+                <p>facebook/RecipeX</p>
+            </div>
+            <div>
+                <img src="./midias/instagram.png" alt="instagram logo">
+                <p>instagram/RecipeX</p>
+            </div>
+            <div>
+                <img src="./midias/twitter.png" alt="twitter logo">
+                <p>twitter/RecipeX</p>
             </div>
         </div>
-        <div id="formulario">
-            <p>Se você tem uma receita ou crítica, e queira nos enviar, aqui é o lugar (créditos na página)</p>
-            <form action="get">
-                <div class="form-control">
-                    <input type="text" name="nome" placeholder="Nome" id="nome" class="input">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <i class="fa-solid fa-circle-check"></i>
-                    <small>mensagem de erro</small>
-                </div>
-                <div class="form-control">
-                    <input type="email" name="e-mail" placeholder="E-mail" id="email" class="input">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <i class="fa-solid fa-circle-check"></i>
-                    <small>Mensagem de erro</small>
-                </div>
-                <input type= "file" name="file" id="arquivo-receita" accept=".pdf">
-                <button type="submit" id="submit">Enviar</button>
-            </form>
-        </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>Site feito por Gabriel Azevedo</p>
-  </footer>
-
-  <script src="main.js"></script>
-  <script src="https://kit.fontawesome.com/334c1ff5ca.js" crossorigin="anonymous"></script>
+        
+    </footer>
+    
 </body>
 </html>
