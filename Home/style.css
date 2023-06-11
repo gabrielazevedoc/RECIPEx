@@ -103,17 +103,49 @@ h2{
 footer{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
+    background-color: #383736;
 }
 
 #logofooter{
     width: 50%;
     height: 50px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    /* justify-content: center; */
 }
 
 #logofooter img{
     width: 91px;
     height: 91px;
+}
+
+#socialmedia{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    width: 128.88px;
+    height: 89.38px;
+}
+
+#socialmedia p{
+    color: white;
+}
+
+#socialmedia div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 128px;
+    height: 16.88px;
+}
+
+#socialmedia div img{
+    width: 16.88px;
+    height: 16.88px;
 }
