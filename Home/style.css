@@ -12,6 +12,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 86px; 
+    padding: 5px;
 }
 
 img#recipelogonav{
@@ -20,9 +21,9 @@ img#recipelogonav{
 }
 
 img#burguernav{
-    width: 15px;
-    height: 15px;
-    margin-right: 20px;
+    width: 18.99px;
+    height: 14.25px;
+    margin-right: 10px;
 }
 
 header{
@@ -38,8 +39,7 @@ header{
 h1{
     width: 293px;
     height: 112px;
-
-    font-family: 'Arial';
+    font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
     font-weight: 700;
     font-size: 48px;
@@ -49,11 +49,14 @@ h1{
     
 }
 
+#xis{
+    color: #FF674D;
+}
+
 p{
     width: 329px;
     height: 36px;
-
-    font-family: 'Arial';
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -69,7 +72,7 @@ button{
     height: 38px;
     margin-top: 10px;
     border-radius: 40px;
-    font-family: 'Arial';
+    font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
     font-size: 18px;
     color: white;
@@ -84,16 +87,27 @@ main{
     margin-top: 50px;
 }
 
+
 .sections{
     height: 97px;
     background-color: #383736;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.sections:hover{
+    opacity: .95;
+    transform: scale(1.1);
+}
+
+.sections:nth-child(even){
+    background-color: #FF674D;
 }
 
 h2{
-    font-family: 'Arial';
+    font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
     font-weight: 700;
     font-size: 20px;
@@ -103,17 +117,16 @@ h2{
 footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     width: 100%;
     background-color: #383736;
+    padding: 30px;
 }
 
 #logofooter{
     width: 50%;
-    height: 50px;
+    height: 100%;
     display: flex;
-    align-items: center;
-    /* justify-content: center; */
+    border-right: 1px solid white;
 }
 
 #logofooter img{
@@ -122,13 +135,11 @@ footer{
 }
 
 #socialmedia{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
+    align-items: center;
     gap: 20px;
-    width: 128.88px;
-    height: 89.38px;
 }
 
 #socialmedia p{
@@ -138,8 +149,6 @@ footer{
 #socialmedia div{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 0px;
     gap: 10px;
     width: 128px;
     height: 16.88px;
