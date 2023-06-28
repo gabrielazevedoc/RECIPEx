@@ -8,23 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div id="login">
         <h1>Entrar</h1>
-        <button>
-            <img src="" alt="">
-            <p>Facebook</p>
+        <button id="facebook">
+            <img src="./login midea/FacebookLogo.svg" alt="facebook logo">
+            <p>facebook</p>
         </button>
         <p>ou</p>
-        <button>
+        <button id="gmail">
             <img src="" alt="">
-            <p>Gmail</p>
+            <p>gmail</p>
         </button>
         <p>ou</p>
 
-        <label for="">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="Digite o seu e-mail">
-        <label for="">Senha</label>
-        <input type="password" name="password" id="password" placeholder="Digite a sua senha">
+        <form action="">
+            <div class="input">
+                <label for="">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite o seu e-mail">
+            </div>
+            <div class="input">
+                <label for="">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite a sua senha">
+            </div>
+        </form>
 
         <button>Entrar</button>
     </div>

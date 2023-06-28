@@ -6,3 +6,37 @@
     padding: 0;
 }
 
+div#login{
+    margin: 0 auto;
+    width: min(346px,50vw);
+    height: min(450px, 50vh);
+}
+
+h1{
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: 700;
+}
+
+#facebook{
+    display: flex;
+    width: 215px;
+    padding: 9px 27px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background: #627AAD;
+}
+
+#facebook p{
+    color: var(--colors-white, #FFF);
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: 700;
+}
+
+img{
+    width: 32px;
+    height: 32px;
+}
+
