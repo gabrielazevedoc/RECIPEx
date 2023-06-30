@@ -8,35 +8,126 @@
 
 div#login{
     margin: 0 auto;
-    width: min(346px,50vw);
-    height: min(450px, 50vh);
+    width: 346px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    vertical-align: middle;
 }
 
 h1{
     font-size: 40px;
     font-family: Arial;
     font-weight: 700;
+    margin: 0 auto;
+}
+
+#socialmediabuttons{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
 }
 
 #facebook{
     display: flex;
-    width: 215px;
-    padding: 9px 27px;
+    width: 150px;
+    padding: 5px 20px;
     justify-content: space-between;
     align-items: center;
     border-radius: 40px;
     background: #627AAD;
+    border: none;
 }
 
-#facebook p{
-    color: var(--colors-white, #FFF);
-    font-size: 24px;
+#facebook, #gmail span{
+    color: #FFF;
+    font-size: 16px;
     font-family: Arial;
     font-weight: 700;
 }
 
 img{
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
 }
+
+#socialmediabuttons p{
+    color: #94A3B8;
+    font-size: 16px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#gmail{
+    display: flex;
+    width: 120px;
+    padding: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background: #EF4444;
+    border: none;
+}
+
+form{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.input{
+    display: flex;
+    width: 346px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+label{
+    color: #000;
+    font-size: 16px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+input{
+    padding: 9px 18px;
+    align-self: stretch;
+    background: var(--cinza-escuro-chefsteps, #383736);
+    border: none;
+}
+
+#email{
+    background-image: url(../Login/login\ midea/Envelope.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px);
+    background-size: 20px;
+}
+
+#password{
+    background-image: url(../Login/login\ midea/LockSimple.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px);
+    background-size: 20px;
+    padding-right: 30px;
+}
+
+input[type="submit"]{
+    width: 120px;
+    padding: 5px 20px;
+    border-radius: 40px;
+    background: var(--laranja-chefsteps, #FF674D);
+    margin: auto;
+    border: none;
+}
+
+
+
 
