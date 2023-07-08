@@ -13,6 +13,7 @@ body{
 }
 
 div#login{
+    background-color: white;
     margin: auto;
     width: 346px;
     height: 450px;
