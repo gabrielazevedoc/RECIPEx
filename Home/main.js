@@ -3,11 +3,11 @@
 const menu = document.querySelector('#menu')
 const menuWrapper = document.querySelector('.menu-wrapper')
 
-menu.onmouseover = function(){
-    menuWrapper.classList.add('open')
+menu.onclick = function(){
+    menuWrapper.classList.toggle('open')
 }
 
-menu.onmouseout = function(){
-    menuWrapper.classList.remove('open')
-}
+// menu.onmouseout = function(){
+//     menuWrapper.classList.remove('open')
+// }
 
