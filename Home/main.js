@@ -7,10 +7,10 @@ const menuWrapper = document.querySelector('.menu-wrapper')
 menu.onclick = function(){
     menuWrapper.classList.toggle('open')
 
-    const isOpen = menuWrapper.classList.contains('open')
-    buttonMenu.classList = isOpen
-    ? 'fa-regular fa-x'
-    : 'fa-solid fa-bars'
+    if(menuWrapper.classList.contains('open')){
+    buttonMenu.classList.remove('fa-solid fa-bars')
+    buttonMenu.classList.add('fa-solid fa-x')
+    }
 }
 
 
