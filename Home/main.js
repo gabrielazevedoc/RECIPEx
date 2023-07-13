@@ -1,4 +1,4 @@
-// Aparecer menu quando tocar no Icone do Hamburguer
+// Aparecer dropdown menu quando clicar no Icone menu Hamburguer
 
 const menu = document.querySelector('#menu')
 const buttonMenu = document.querySelector('#menu i')
@@ -7,10 +7,10 @@ const menuWrapper = document.querySelector('.menu-wrapper')
 menu.onclick = function(){
     menuWrapper.classList.toggle('open')
 
-    if(menuWrapper.classList.contains('open')){
-    buttonMenu.classList.remove('fa-solid fa-bars')
-    buttonMenu.classList.add('fa-solid fa-x')
-    }
+    const isOpen = menuWrapper.classList.contains('open')
+    buttonMenu.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
 }
 
 
