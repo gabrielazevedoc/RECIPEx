@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 nav{
     display: flex;
     flex-direction: row;
@@ -21,15 +25,11 @@ nav ul{
     display: none;
 }
 
-nav ul li{
+nav ul li a{
     color: #383736;
     cursor: pointer;
+    padding: 4px;
 }
-
-a{
-    text-decoration: none;
-}
-
 
 .menu-wrapper{
     width: 200px;
@@ -60,7 +60,7 @@ a{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 12px; 
-    padding: 4px;
+    padding: 6px;
     cursor: pointer;
 }
 
@@ -168,7 +168,7 @@ main{
     background-color: #f85d42;
 }
 
-h2{
+h2 a{
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
     font-size: 20px;

@@ -17,11 +17,13 @@ div#login{
     background-color: white;
     border-radius: 6px;
     margin: auto;
-    width: 346px;
-    height: 450px;
+    min-width: 410px;
+    max-height: 510px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+    padding: 15px;
+    box-shadow: 6px 4px 15px rgb(36, 36, 36);
 }
 
 h1{
@@ -84,15 +86,14 @@ img{
 form{
     display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
 }
 
 .input{
     display: flex;
-    width: 346px;
+    width: 300px;
     flex-direction: column;
-    align-items: flex-start;
     gap: 4px;
 }
 
@@ -105,14 +106,14 @@ label{
     line-height: normal;
 }
 
-input{
+.input input{
     padding: 9px 18px;
     background: #383736;
     border: none;
 }
 
-inputonfocus{
-
+.input input:focus{
+    border: 1px solid #FF674D;
 }
 
 #email{
@@ -135,17 +136,23 @@ input[type="submit"]{
     padding: 5px 20px;
     border-radius: 40px;
     background: #FF674D;
+    color: #FFF;
+    font-weight: bold;
     margin: 24px auto;
     border: none;
 }
 
 #cadastrar{
     margin: auto;
-    color: #000;
     font-size: 12px;
     font-family: Roboto;
     font-weight: lighter;
     text-decoration-line: underline;
+    }
+
+    a{
+        text-decoration: none;
+        color: #000;
     }
 
 
