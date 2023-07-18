@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeX</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Calculadora-eventos/javascript/script.js" defer type="module"></script>
+    <script src="https://kit.fontawesome.com/334c1ff5ca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="calculadora-eventos">
+        <h1>Calculadora de eventos</h1>
+        <form action="#">
+            <div class="input">
+                <label for="tipo-evento">Tipo de evento</label>
+                <select name="tipo-evento" id="tipo-evento">
+                    <option value="" disabled selected>Escolha o tipo de evento</option>
+                    <option value="Churrasco">Churrasco</option>
+                    <option value="Feijoada">Feijoada</option>
+                    <option value="Buffet">Risoto</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="adultos">Número de adultos</label>
+                <input type="number" name="adultos" id="adultos" placeholder="10">
+            </div>
+            <div class="input">
+                <label for="criancas">Número de crianças</label>
+                <input type="number" name="criancas" id="criancas" placeholder="5">
+            </div>
+            <div class="input">
+                <input type="submit" value="Calcular" id="button">
+            </div>
+        </form>
+    </div>
+
+    <div class="modal">
+        <h1>Churrasco</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente at laboriosam accusantium veritatis molestias rem hic fugit praesentium dolorem quod, tempora eligendi obcaecati recusandae aliquid dolorum repellat, quidem maiores ut?</p>
+        <i class="fa-solid fa-x"></i>
+    </div>
+</body>
+</html>
