@@ -1,4 +1,5 @@
 import { modal } from "./modal.js"
+import { calcularProteina, calcularBebidaA, calcularBebidaNA } from "./utils.js"
 
 
 const form = document.querySelector('form')
@@ -11,20 +12,26 @@ form.onsubmit = showModalResult
 
 function showModalResult(event){
     event.preventDefault()
-    modal.open()
 
-    calculateEvent()
-}
-
-//lógica para calcular o evento
-
-function calculateEvent(){
     const tipoEvento = inputTipoEvento.value
     const totalAdultos = inputTotalAdultos.value
-    const TotalCriancas = inputTotalCriancas.value
+    const totalCriancas = inputTotalCriancas.value
 
-    if(tipoEvento == "Churrasco"){
-        const totalCarne = totalAdultos*300
-        console.log(totalCarne)
-    }
+    const proteina = calcularProteina(totalAdultos,totalCriancas)
+    const bebidaA = calcularBebidaA(totalAdultos,totalCriancas)
+    const bebidaNA = calcularBebidaNA(totalAdultos,totalCriancas)
+    
+    MostrarResultado(tipoEvento,proteina,bebidaA,bebidaNA)
+}
+
+
+function MostrarResultado(tipoEvento,proteina,bebidaA,bebidaNA){
+    const mudarModalTexto = `Quantidade de proteina necessária: ${proteina}g
+    Quantidade de bebida alcoólica necessária: ${bebidaA}ml
+    Quantidade de bebida não-alcoólica necessária: ${bebidaNA}ml`
+    
+    modal.h1.innerText = tipoEvento
+    modal.text.innerText = mudarModalTexto
+
+    modal.open()
 }
