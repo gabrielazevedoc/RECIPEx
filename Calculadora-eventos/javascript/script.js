@@ -1,5 +1,5 @@
 import { modal } from "./modal.js"
-import { calcularProteina, calcularBebidaA, calcularBebidaNA } from "./utils.js"
+import { calcularProteina,calcularAcompanhamento, calcularBebidaA, calcularBebidaNA } from "./utils.js"
 
 
 const form = document.querySelector('form')
@@ -18,18 +18,56 @@ function showModalResult(event){
     const totalCriancas = inputTotalCriancas.value
 
     const proteina = calcularProteina(totalAdultos,totalCriancas)
-    const bebidaA = calcularBebidaA(totalAdultos,totalCriancas)
+    const acompanhamento = calcularAcompanhamento(totalAdultos,totalCriancas)
+    const bebidaA = calcularBebidaA(totalAdultos)
     const bebidaNA = calcularBebidaNA(totalAdultos,totalCriancas)
     
-    MostrarResultado(tipoEvento,proteina,bebidaA,bebidaNA)
+    MostrarResultado(tipoEvento,proteina,acompanhamento,bebidaA,bebidaNA)
 }
 
 
-function MostrarResultado(tipoEvento,proteina,bebidaA,bebidaNA){
-    const mudarModalTexto = `Quantidade de proteina necessária: ${proteina}g
-    Quantidade de bebida alcoólica necessária: ${bebidaA}ml
-    Quantidade de bebida não-alcoólica necessária: ${bebidaNA}ml`
+function MostrarResultado(tipoEvento,proteina,acompanhamento,bebidaA,bebidaNA){
+    let mudarModalTexto
+
+    if(tipoEvento == "Churrasco"){
+        mudarModalTexto = `Quantidade de proteina necessária: ${proteina}kg
+                                 
+                                 Sugestões: ${proteina/3}kg de carne bovina, ${proteina/3}kg de frango, ${proteina/9}kg de linguiça, ${proteina/9}kg de pão de alho e ${proteina/9}kg de queijo
+
+                                 Quantidade de acompanhamento necessária: ${acompanhamento}kg
+
+                                 Sugestões: ${acompanhamento/2}kg de vinagrete e ${acompanhamento/2}kg de farofa
+                                 
+                                 Quantidade de bebida alcoólica necessária: ${bebidaA}L
+                                 Quantidade de bebida não-alcoólica necessária: ${bebidaNA}L`
     
+    }
+    else if (tipoEvento == "Feijoada"){
+        mudarModalTexto = `Quantidade de proteina necessária: ${proteina}kg
+                                 
+                                 Sugestões: ${proteina/3}kg de charque, ${proteina/3}kg de costelinha defumada, ${proteina/3}kg de linguiça calabresa para o feijão
+
+                                 Quantidade de acompanhamento necessária: ${acompanhamento}kg
+
+                                 Sugestões: ${acompanhamento/3}kg de vinagrete, ${acompanhamento/3}kg de farofa e ${acompanhamento/3} de couva refogada
+                                 
+                                 Quantidade de bebida alcoólica necessária: ${bebidaA}L
+                                 Quantidade de bebida não-alcoólica necessária: ${bebidaNA}L`
+    
+    }
+    else{
+        mudarModalTexto = `Quantidade de proteina necessária: ${proteina}kg
+                                 
+                                 Sugestões: ${proteina/2}kg de filé, ${proteina/2}kg de peito de frango
+
+                                 Quantidade de acompanhamento necessária: ${acompanhamento}kg
+
+                                 Sugestões: ${acompanhamento/3}kg de arroz, ${acompanhamento/3}kg de macarrão e ${acompanhamento/3} de salada diversa
+                                 
+                                 Quantidade de bebida alcoólica necessária: ${bebidaA}L
+                                 Quantidade de bebida não-alcoólica necessária: ${bebidaNA}L`
+    }
+
     modal.h1.innerText = tipoEvento
     modal.text.innerText = mudarModalTexto
 

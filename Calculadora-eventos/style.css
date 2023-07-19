@@ -65,7 +65,7 @@ input[type='submit']{
     background-color: white;
     width: min(500px, 80%);
     padding: 30px;
-    margin-top: 50px;
+    margin: 50px 0;
     text-align: center;
     border-radius: 6px;
 
