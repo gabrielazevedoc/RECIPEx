@@ -87,7 +87,7 @@ header{
     gap: 50px;
     align-items: center;
     width: 80%;
-    min-height: 390px;
+    min-height: 434px;
     margin: 30px auto;
 }
 
@@ -150,7 +150,7 @@ footer{
     width: 100%;
     margin: 0 auto;
     background-color: #383736;
-    padding: 30px;
+    padding: 20px;
 }
 
 #logofooter{
@@ -245,11 +245,17 @@ footer{
     }
 
     .header-text{
-        text-align: start;
+        text-align: center;
     }
 
     video{
         width: 47%;
+    }
+
+    #socialmedia{
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
     }
 
 }
