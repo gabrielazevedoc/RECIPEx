@@ -7,8 +7,8 @@ function showResult(event){
     event.preventDefault()
 
     const eventType = document.querySelector('#eventType').value
-    const totalAdults = document.querySelector('#adults').value
-    const totalChildren = document.querySelector('#children').value
+    const totalAdults = Number(document.querySelector('#adults').value)
+    const totalChildren = Number(document.querySelector('#children').value)
 
     modal.text.innerText = calculate()
     modal.h1.innerText = eventType
