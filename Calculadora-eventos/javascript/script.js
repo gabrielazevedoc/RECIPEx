@@ -10,8 +10,8 @@ const inputTotalCriancas = document.querySelector('#criancas')
 
 form.onsubmit = showModalResult
 
-function showModalResult(){
-    Event.preventDefault()
+function showModalResult(event){
+    event.preventDefault()
 
     const tipoEvento = inputTipoEvento.value
     const totalAdultos = inputTotalAdultos.value
