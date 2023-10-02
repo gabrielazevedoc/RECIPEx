@@ -1,16 +1,9 @@
-export function calcularProteina(totalAdultos,totalCriancas){
-    return (((totalAdultos*300) + (totalCriancas*150))/1000).toFixed(2)
-}
+export function calculate(totalAdults,totalChildren){
+    let eventFood = (totalAdults + totalChildren) * 0.7
+    let eventDrink = (totalAdults + totalChildren) * 0.5
 
-export function calcularAcompanhamento(totalAdultos,totalCriancas){
-    return (((totalAdultos*100) + (totalCriancas*50))/1000).toFixed(2)
-}
+    const result = "A quantidade total de comida para o seu evento é de " + eventFood + " kg e\n a quantidade total de bebida é " + eventDrink +" L"
 
-export function calcularBebidaA(totalAdultos){
-    return ((totalAdultos*500)/1000).toFixed(2)
-}
-
-export function calcularBebidaNA(totalAdultos,totalCriancas){
-    return (((totalAdultos*300) + (totalCriancas*150))/1000).toFixed(2)
+    return result
 }
 
