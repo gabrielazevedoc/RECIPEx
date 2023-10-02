@@ -85,7 +85,7 @@ img#recipelogonav{
 header{
     width: 100%;
     display: flex;
-    min-height: 434px;
+    height: 485px;
 }
 
 .header-text{
@@ -116,7 +116,7 @@ header{
     height: 36px;
     margin-bottom: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
+    font-style: light;
     font-size: 20px;
     color: #383736;
 }
@@ -141,12 +141,15 @@ footer{
     justify-content: center;
     width: 100%;
     background-color: #383736;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.37) inset;
 }
 
 .footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    
 }
 
 .footer img{
@@ -157,8 +160,8 @@ footer{
 .footer p{
     width: 222px;
     font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-size: 16px;
+    font-style: italic;
+    font-size: 12px;
     color: white;
 }
 
