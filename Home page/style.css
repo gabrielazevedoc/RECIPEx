@@ -97,11 +97,11 @@ header{
     margin: auto;
 }
 
-h1{
+.header-text h1{
     max-width: 400px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold; 
-    font-size: 48px;
+    font-size: 64px;
     line-height: 55px;
     color: #383736;
     
@@ -111,13 +111,13 @@ h1{
     color: #FF674D;
 }
 
-p{
-    width: 329px;
+.header-text p{
+    width: 400px;
     height: 36px;
     margin-bottom: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
     color: #383736;
 }
 
@@ -126,6 +126,7 @@ header button{
     width: 112px;
     height: 34px;
     border-radius: 40px;
+    box-shadow: 3px 3px 6px #38373641;
     padding: 5px 0;
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
@@ -137,63 +138,28 @@ header button{
 
 footer{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    margin: 0 auto;
     background-color: #383736;
-    padding: 20px;
 }
 
-#logofooter{
-    width: 50%;
-    height: 100%;
+.footer{
     display: flex;
-    border-right: 1px solid white;
-    gap: 10px;
+    justify-content: center;
     align-items: center;
 }
 
-#logofooter img{
-    width: 91px;
-    height: 91px;
+.footer img{
+    width: 40px;
+    height: 40px;
 }
 
-#logofooter h2{
+.footer p{
+    width: 222px;
     font-family: Arial, Helvetica, sans-serif;
-    font-style: bold;
-    font-size: 20px;
+    font-style: normal;
+    font-size: 16px;
     color: white;
-}
-
-#socialmedia{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-#socialmedia p{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-
-}
-
-#socialmedia div{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 128px;
-    height: 16.88px;
-}
-
-#socialmedia div img{
-    width: 16.88px;
-    height: 16.88px;
 }
 
 @media only screen and (min-width: 800px){
@@ -219,7 +185,7 @@ footer{
     li{
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
-        font-size: 12px; 
+        font-size: 14px; 
         padding: 4px;
     }
 
@@ -230,23 +196,14 @@ footer{
     }
 
     header{
-       flex-direction: row;
-       justify-content: space-between;
-       margin: 0 auto;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
     }
 
     .header-text{
         text-align: center;
-    }
-
-    video{
-        width: 47%;
-    }
-
-    #socialmedia{
-        flex-direction: row;
-        justify-content: center;
-        gap: 30px;
     }
 
 }
