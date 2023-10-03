@@ -1,9 +1,9 @@
 const form = document.querySelector("#form")
-let eventType = document.querySelector("#eventType").value
-let totalAdults = Number(document.querySelector("#adults").value)
-let totalChildren = Number(document.querySelector("#children").value)
+let eventType = document.querySelector("#eventType")
+let totalAdults
+let totalChildren
 
-
+console.log(eventType)
 let totalFoodandDrink = {
     food: 0,
     Adrink: 0,
@@ -31,7 +31,11 @@ form.addEventListener("submit", showEventResult)
 function showEventResult(event){
     event.preventDefault()
 
-    calculate(totalAdults,totalChildren)
+    eventTypeValue = eventType.value;
+    totalAdults = Number(document.querySelector("#adults").value);
+    totalChildren = Number(document.querySelector("#children").value);
+    
+    calculate(totalAdults, totalChildren)
     changeModalText(totalAdults, totalChildren, totalFoodandDrink)
     
     modal.open()
@@ -44,14 +48,14 @@ function calculate(totalAdults, totalChildren){
     totalFoodandDrink.NAdrink = totalAdults*0.4 + totalChildren*0.25
 }
 
-function changeModalText(totalFoodandDrink, totalAdults, totalChildren){
-    let message = `Total de convidados: ${totalAdults+totalChildren}
-                   Total de comida necessária: ${totalFoodandDrink.food}
-                   Total de bebida alcoólica: ${totalFoodandDrink.Adrink}
-                   Total de bebida não-alcoólica: ${totalFoodandDrink.NAdrink}`
+function changeModalText(totalAdults, totalChildren, totalFoodandDrink){
+    let message = `Total de convidados: ${totalAdults+totalChildren} convidados
+                   Total de comida necessária: ${totalFoodandDrink.food} kg
+                   Total de bebida alcoólica: ${totalFoodandDrink.Adrink} L
+                   Total de bebida não-alcoólica: ${totalFoodandDrink.NAdrink} L`
 
     modal.text.innerText = message
-    modal.h1.innerText = eventType
+    modal.h1.innerText = eventTypeValue
 }
 
 modal.modalButton.onclick = function(){
