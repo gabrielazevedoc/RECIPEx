@@ -1,2 +1,2 @@
 # RECIPEx
- Site de receitas
+ Biblioteca de receitas
