@@ -1,0 +1,44 @@
+.NavBar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 72px;
+
+    .logo{
+        width: 90px;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        list-style: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    a{
+        text-decoration: none;
+        color: #383736;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+    .login-button{
+        width: 90px;
+        padding: 4px;
+        border: none;
+        border-radius: 40px;
+        background-color: #FF674D;
+        color: #FFF;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
