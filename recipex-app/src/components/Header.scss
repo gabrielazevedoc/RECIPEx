@@ -1,12 +1,12 @@
-.Header{
-    width: 100%;
+.Header-container{
+    width: 85%;
+    margin: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
-    .Header-text{
-        width: 600px;
+    .Header-content{
+        max-width: 600px;
         display: flex;
         flex-direction: column; 
 
@@ -49,7 +49,6 @@
     .Header-img{
         img{
             max-width: 430px;
-            margin-right: 40px;
         };
     }
 }

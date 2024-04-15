@@ -6,6 +6,7 @@
   "author": "Gabriel Azevedo <gabrielazevedoc15@hotmail.com>",
   "license": "MIT",
   "dependencies": {
+    "react-icons": "^5.0.1",
     "sass": "^1.74.1"
   }
 }
