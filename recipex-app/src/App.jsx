@@ -1,16 +1,18 @@
-
-
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+import './App.scss';
 
 
 function App() {
   return (
     <>
-      <NavBar/>
-      <Header/>
-      <Footer/>
+      <div className="Home-page-container">
+        <NavBar/>
+        <Header/>
+        <Footer/>
+      </div>
     </>
   );
 }
