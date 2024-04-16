@@ -1,5 +1,5 @@
 .NavBar{
-    width: 85%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -7,6 +7,7 @@
 
     .logo{
         width: 90px;
+        margin-left: 40px;
     }
 
     .nav{
@@ -33,6 +34,7 @@
 
     .login-button{
         width: 90px;
+        margin-right: 40px;
         padding: 4px;
         border: none;
         border-radius: 40px;
@@ -41,5 +43,11 @@
         font-family: "Poppins", sans-serif;
         font-weight: 600;
         cursor: pointer;
+    }
+
+    @media (max-width: 750px) {
+        .nav, .login-button{
+            display: none;
+        }
     }
 }

@@ -1,0 +1,13 @@
+.burguer-menu-container{
+    width: 30px;
+    color: #383736;
+
+}
+
+.hide{
+    display: none;
+
+    @media (max-width: 750px) {
+        display: block;
+    }
+}

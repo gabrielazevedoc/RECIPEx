@@ -1,4 +1,5 @@
 import logo from "../assets/images/recipex-logo.png";
+import BurguerMenu from "./BurguerMenu";
 import './NavBar.scss';
 
 const NavBar = () => {
@@ -17,6 +18,7 @@ const NavBar = () => {
             </li>
         </ul>
         <button className="login-button">Entrar</button>
+        <BurguerMenu/>
        </div> 
     )
 }
