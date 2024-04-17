@@ -1,11 +1,11 @@
-import logo from "../assets/images/recipex-logo.png";
+import Logo from "./Logo";
 import BurguerMenu from "./BurguerMenu";
 import './NavBar.scss';
 
 const NavBar = () => {
     return(
        <div className="NavBar">
-        <img className="logo" src={logo} alt="logo do site" />
+        <Logo/>
         <ul className="nav">
             <li>
                 <a href="#">Receitas</a>

@@ -1,6 +1,7 @@
 import HeaderImg from '../assets/images/imagem-vegetais.png';
 import './Header.scss'
 
+
 const Header = () => {
     return(
         <div className="Header-container">
