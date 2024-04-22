@@ -1,0 +1,10 @@
+.recipe-category-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    .recipe-category-cards{
+        height: 400px;
+        background-color: red;
+    }
+}
