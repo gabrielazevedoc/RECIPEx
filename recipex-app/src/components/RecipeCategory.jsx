@@ -15,7 +15,7 @@ const RecipeCategory = () => {
             <div className="recipe-category-cards">
                 <RecipeCategoryCard img={MeatImg} alt="imagem da categoria de carnes" title="Carnes"/>
                 <RecipeCategoryCard img={ChickenImg} alt="imagem da categoria de aves" title="Aves"/>
-                <RecipeCategoryCard img={FishImg} alt="imagem da categoria de peixes" title="Peixes"/>
+                <RecipeCategoryCard img={FishImg} alt="imagem da categoria de peixes" title="Frutos do mar"/>
                 <RecipeCategoryCard img={VegetablesImg} alt="imagem da categoria de vegetais" title="Vegetais"/>
                 <RecipeCategoryCard img={DessertImg} alt="imagem da categoria de sobremesas" title="Sobremesas"/>
             </div>
