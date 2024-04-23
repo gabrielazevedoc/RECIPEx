@@ -3,10 +3,16 @@
     height: 333.59px;
     display: inline-block;
     position: relative;
+    overflow: hidden;
 
     img{
         width: 100%;
         border-radius: 4px;
+        transition: transform .5s ease;
+    }
+
+    img:hover{
+        transform: scale(1.1);
     }
 
     h3{
