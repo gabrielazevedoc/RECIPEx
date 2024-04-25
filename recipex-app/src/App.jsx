@@ -1,4 +1,4 @@
-// import {Routes, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 import './App.scss';
 
@@ -8,7 +8,10 @@ import RecipeCategoryPage from './pages/RecipeCategoryPage';
 
 function App() {
   return (
-    <RecipeCategoryPage/>
+    <Routes>
+      <Route exact path='/' Component={HomePage}/>
+      <Route path='/Receitas' Component={RecipeCategoryPage}/>
+    </Routes>
   );
 }
 
