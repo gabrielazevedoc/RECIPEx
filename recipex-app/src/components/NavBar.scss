@@ -1,10 +1,10 @@
-.NavBar{
+.navbar-container{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .nav{
+    .nav-list{
         display: flex;
         flex-direction: row;
         gap: 50px;
