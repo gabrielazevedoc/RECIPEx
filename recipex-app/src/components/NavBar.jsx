@@ -1,18 +1,12 @@
 import Logo from "./Logo";
 import BurguerMenu from "./BurguerMenu";
 import './NavBar.scss';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-        navigate('/')
-    }
-
-    return(
+     return(
        <div className="navbar-container">
-        <Logo onclick={handleClick} />
+        <Link to={'/'}>{<Logo/>}</Link>
         <ul className="nav-list">
             <li>
                 <Link to={'/Receitas'}>Receitas</Link> 
