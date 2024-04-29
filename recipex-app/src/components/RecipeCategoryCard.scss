@@ -4,15 +4,13 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
+    transition: transform .5s ease;
+    
 
     img{
         width: 100%;
         border-radius: 4px;
-        transition: transform .5s ease;
-    }
-
-    img:hover{
-        transform: scale(1.1);
+        
     }
 
     h3{
@@ -25,4 +23,8 @@
         font-size: 16px;  
         color: #383736;
     }
+}
+
+.category-container:hover{
+    transform: scale(1.1);
 }
