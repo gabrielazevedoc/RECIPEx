@@ -1,13 +1,15 @@
 .recipe-container{
     display: flex;
-    max-width: 500px;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 500px;
     height: 80px;
-    border-radius: 12px;
     padding: 0;
 
     .recipe-bar{
-        width: 10px;
+        width: 12px;
         height: 100%;
         background-color: red;
+        border-radius: 12px 0 0 12px;
     }
 }
