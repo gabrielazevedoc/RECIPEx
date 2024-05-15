@@ -6,7 +6,6 @@ const RecipeListCard = () => {
             <div className="recipe-bar"></div>
             <div className="recipe-content">
                 <div className="recipe-title">
-                    <span></span>
                     <h2>Exemplo</h2>
                 </div>
                 <p className="description">Exemplo de descrição...</p>

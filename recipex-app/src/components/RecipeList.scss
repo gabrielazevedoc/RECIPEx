@@ -16,9 +16,9 @@
     }
 
     .recipe-list-cards{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
     }
 
 }

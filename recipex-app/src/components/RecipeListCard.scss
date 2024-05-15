@@ -1,15 +1,27 @@
 .recipe-container{
     display: flex;
-    flex-wrap: wrap;
     gap: 16px;
-    width: 500px;
-    height: 80px;
-    padding: 0;
+    max-width: 50%;
+    height: 70px;
 
     .recipe-bar{
         width: 12px;
         height: 100%;
-        background-color: red;
+        background-color: #BF1304;
         border-radius: 12px 0 0 12px;
+    }
+
+    .recipe-title{
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: #383736;
+    }
+
+    .description{
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 12px;
+        color: #383736;
     }
 }
