@@ -1,13 +1,61 @@
-.burguer-menu-container{
-    width: 30px;
-    color: #383736;
+.menu-container {
+    position: relative;
 
+     /* Estilos para o menu lateral */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Começa fora da tela */
+    width: 250px;
+    height: 100%;
+    background-color: #383736;
+    transition: right 0.3s ease;
+  }
+  
+  .sidebar.open {
+    right: 0; /* Move para dentro da tela quando está aberto */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  
+  .sidebar ul li {
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #555;
+  }
+  
+  /* Estilos para o ícone de fechar */
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .burguer-menu{
+    margin-right: 20px;
+  }
+  
+
+  
 }
 
-.hide{
-    display: none;
+@media (min-width: 750px) {
 
-    @media (max-width: 750px) {
-        display: block;
+    .menu-container{
+        display: none;
     }
 }
+  
+ 
+
+

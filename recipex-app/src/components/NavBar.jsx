@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import SideBar from "./SideBar";
+import BurguerMenu from './BurguerMenu'
 import './NavBar.scss';
 import { Link } from "react-router-dom";
 
@@ -12,14 +12,14 @@ const NavBar = () => {
                 <Link to={'/Receitas'}>Receitas</Link> 
             </li>
             <li>
-                Reviews
+                <Link to={'/'}>Reviews</Link>
             </li>
             <li>
-                Cadastrar
+                <Link to={'/'}>Cadastrar</Link>
             </li>
         </ul>
         <button className="login-button">Entrar</button>
-        <SideBar className="burguer-menu-container hide"/>
+        <BurguerMenu/>
        </div> 
     )
 }
