@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import './App.scss';
 
@@ -9,11 +9,13 @@ import RecipePage from './pages/RecipePage'
 
 function App() {
   return (
-    <Routes>
-      <Route exact path='/' element={<HomePage/>}/>
-      <Route path='/Receitas' element={<RecipeCategoryPage/>}/>
-      <Route path='/Lista-Receitas-Carne' element={<RecipePage/>}/>
-    </Routes>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<HomePage/>}/>
+        <Route path='/Receitas' element={<RecipeCategoryPage/>}/>
+        <Route path='/Lista-Receitas-Carne' element={<RecipePage/>}/>
+      </Routes>
+    </Router>
   );
 }
 
