@@ -9,5 +9,6 @@ export default [
   {languageOptions: { globals: {...globals.browser, ...globals.node} }},
   pluginJs.configs.recommended,
   { files: ["**/*.jsx"], languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } } },
-  ...fixupConfigRules(pluginReactConfig), {rules: {"react/react-in-jsx-scope": "off", "react/prop-types": "off"}}
+  ...fixupConfigRules(pluginReactConfig), 
+  {rules: {"react/react-in-jsx-scope": "off", "react/prop-types": "off"}}
 ];
