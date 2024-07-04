@@ -1,24 +1,23 @@
-.recipe-category-container{
-    width: 80%;
-    margin: auto;
+.recipe-category-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 21px;
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 80px;
+    letter-spacing: 18px;
+    color: #383736;
+  }
+
+  .recipe-category-cards {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 21px;
-
-    h1{
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 80px;
-        letter-spacing: 18px;
-        color: #383736;
-    }
-
-    .recipe-category-cards{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
