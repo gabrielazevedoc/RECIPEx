@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import './App.scss'
+import "./App.scss"
 
 import HomePage from './pages/HomePage'
 import RecipeCategoryPage from './pages/RecipeCategoryPage'
