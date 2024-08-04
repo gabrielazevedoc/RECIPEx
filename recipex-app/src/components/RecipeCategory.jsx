@@ -8,7 +8,17 @@ import RecipeCategoryCard from './RecipeCategoryCard'
 
 import './RecipeCategory.scss'
 
+import { useNavigate } from 'react-router-dom'
+
 const RecipeCategory = () => {
+
+  const navigate = useNavigate()
+
+  const handleCardClick = () => {
+    console.log("dhee")
+    navigate('/Lista-Receitas-Carne')
+  }
+
   return (
     <div className="recipe-category-container">
       <h1>Categorias</h1>
@@ -17,6 +27,7 @@ const RecipeCategory = () => {
           img={MeatImg}
           alt="imagem da categoria de carnes"
           title="Carnes"
+          onClick={handleCardClick}
         />
         <RecipeCategoryCard
           img={ChickenImg}
