@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using RecipexAPI.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +18,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+builder.Services.AddDbContext<RecipexContext>
+(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var summaries = new[]
 {
