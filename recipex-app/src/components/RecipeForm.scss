@@ -1,0 +1,64 @@
+/* src/components/CadastroReceita.css */
+.cadastro-receita-form {
+    background-color: #fefaf5;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .cadastro-receita-form h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .cadastro-receita-form p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .cadastro-receita-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .cadastro-receita-form select,
+  .cadastro-receita-form input,
+  .cadastro-receita-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .cadastro-receita-form textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .cadastro-receita-form button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .cadastro-receita-form button:hover {
+    background-color: #ff5a5a;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
