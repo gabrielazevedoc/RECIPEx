@@ -30,13 +30,19 @@ const RecipeForm = () => {
 
     setError('');
     console.log('Dados do formulário enviados:', formData);
+
+    setFormData({
+      categoria: '',
+      nomeReceita: '',
+      ingredientes: '',
+      modoPreparo: '',})
     // Aqui você pode adicionar a lógica para enviar os dados para um servidor
   };
 
   return (
     <form className="cadastro-receita-form" onSubmit={handleSubmit}>
       <h2>Cadastrar receita</h2>
-      <p>Por favor, preencha todas as informações para melhor futuro:</p>
+      <p>Por favor, preencha todas as informações:</p>
 
       <label htmlFor="categoria">Categoria</label>
       <select
@@ -46,9 +52,11 @@ const RecipeForm = () => {
         required
       >
         <option value="">Escolha a categoria</option>
-        <option value="doce">Doce</option>
-        <option value="salgado">Salgado</option>
-        <option value="bebida">Bebida</option>
+        <option value="carnes">Carnes</option>
+        <option value="aves">Aves</option>
+        <option value="peixes">Peixes</option>
+        <option value="vegetais">Vegetais</option>
+        <option value="sobremesa">Sobremesas</option>
       </select>
 
       <label htmlFor="nomeReceita">Nome da receita</label>
