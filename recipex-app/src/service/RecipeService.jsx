@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/recipe'; // Altere para o endereço da sua API
+const API_URL = 'http://localhost:5130/api/recipe'; // Altere para o endereço da sua API
 
 // Funções de consumo da API
 const RecipeService = {

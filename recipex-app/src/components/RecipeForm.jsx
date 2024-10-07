@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import './RecipeForm.scss';
 
+import RecipeService from '../service/RecipeService'
+
 const RecipeForm = () => {
   const [formData, setFormData] = useState({
     categoria: '',
@@ -11,6 +13,7 @@ const RecipeForm = () => {
   });
 
   const [error, setError] = useState('');
+  const [sucess, setSucess] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -19,7 +22,7 @@ const RecipeForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Validação simples
@@ -28,14 +31,26 @@ const RecipeForm = () => {
       return;
     }
 
-    setError('');
+
+    try{
+      await RecipeService.CreateRecipe(formData)
+      setError('');
+      setSucess('Receita cadastrada com sucesso')
+
+      setFormData({
+        categoria: '',
+        nomeReceita: '',
+        ingredientes: '',
+        modoPreparo: '',})
+    }catch(error){
+      setError('Erro ao cadastrar receita');
+      setSucess(null);
+    }
+
+    
     console.log('Dados do formulário enviados:', formData);
 
-    setFormData({
-      categoria: '',
-      nomeReceita: '',
-      ingredientes: '',
-      modoPreparo: '',})
+    
     // Aqui você pode adicionar a lógica para enviar os dados para um servidor
   };
 
