@@ -6,14 +6,14 @@ import RecipeService from '../service/RecipeService'
 
 const RecipeForm = () => {
   const [formData, setFormData] = useState({
-    categoria: '',
-    nomeReceita: '',
-    ingredientes: '',
-    modoPreparo: '',
+    name: '',
+    category: '',
+    ingredients: '',
+    description: '',
   });
 
   const [error, setError] = useState('');
-  const [sucess, setSucess] = useState('');
+  const [success, setSuccess] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -26,32 +26,33 @@ const RecipeForm = () => {
     e.preventDefault();
 
     // Validação simples
-    if (!formData.categoria || !formData.nomeReceita || !formData.ingredientes || !formData.modoPreparo) {
+    if (!formData.name || !formData.category || !formData.ingredients || !formData.description) {
       setError('Por favor, preencha todos os campos.');
       return;
     }
 
 
     try{
-      await RecipeService.CreateRecipe(formData)
+      await RecipeService.createRecipe(formData)
       setError('');
-      setSucess('Receita cadastrada com sucesso')
+      setSuccess('Receita cadastrada com sucesso')
 
       setFormData({
-        categoria: '',
-        nomeReceita: '',
-        ingredientes: '',
-        modoPreparo: '',})
+        name: '',
+        category: '',
+        ingredients: '',
+        description: '',
+      })
+
     }catch(error){
+      
       setError('Erro ao cadastrar receita');
-      setSucess(null);
+      setSuccess(null);
     }
 
     
     console.log('Dados do formulário enviados:', formData);
 
-    
-    // Aqui você pode adicionar a lógica para enviar os dados para um servidor
   };
 
   return (
@@ -59,10 +60,20 @@ const RecipeForm = () => {
       <h2>Cadastrar receita</h2>
       <p>Por favor, preencha todas as informações:</p>
 
-      <label htmlFor="categoria">Categoria</label>
+      <label htmlFor="name">Nome da receita</label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Digite o nome"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+
+      <label htmlFor="category">Categoria</label>
       <select
-        name="categoria"
-        value={formData.categoria}
+        name="category"
+        value={formData.category}
         onChange={handleChange}
         required
       >
@@ -74,35 +85,26 @@ const RecipeForm = () => {
         <option value="sobremesa">Sobremesas</option>
       </select>
 
-      <label htmlFor="nomeReceita">Nome da receita</label>
-      <input
-        type="text"
-        name="nomeReceita"
-        placeholder="Digite o nome"
-        value={formData.nomeReceita}
-        onChange={handleChange}
-        required
-      />
-
-      <label htmlFor="ingredientes">Ingredientes</label>
+      <label htmlFor="ingredients">Ingredientes</label>
       <textarea
-        name="ingredientes"
+        name="ingredients"
         placeholder="Digite os ingredientes e quantidades"
-        value={formData.ingredientes}
+        value={formData.ingredients}
         onChange={handleChange}
         required
       ></textarea>
 
-      <label htmlFor="modoPreparo">Modo de preparo</label>
+      <label htmlFor="description">Modo de preparo</label>
       <textarea
-        name="modoPreparo"
+        name="description"
         placeholder="Descrição"
-        value={formData.modoPreparo}
+        value={formData.description}
         onChange={handleChange}
         required
       ></textarea>
 
       {error && <p className="error-message">{error}</p>}
+      {success && <p className="success-message">{success}</p>}
 
       <button type="submit">Enviar</button>
     </form>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RecipexAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf9d707a1b53577aa63e9bfbfad1c35a2cd45185")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b005b15fe501c231da1b916c01260c8d9b2895f")]
 [assembly: System.Reflection.AssemblyProductAttribute("RecipexAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RecipexAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

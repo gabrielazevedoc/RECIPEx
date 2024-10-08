@@ -10,10 +10,17 @@ namespace RecipexAPI.Data
     public class RecipexContext : DbContext
     {
          public RecipexContext(DbContextOptions<RecipexContext> options)
-            : base(options)
+            : base(options){}
+        
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Recipe>()
+                .Property(r => r.Id)
+                .ValueGeneratedOnAdd();  // Configuração para auto incremento
         }
 
+            
         public DbSet<Recipe> Recipes { get; set; }
     }
 }

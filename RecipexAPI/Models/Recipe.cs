@@ -7,9 +7,8 @@ namespace RecipexAPI.Models
 {
     public class Recipe
     {
-        public Recipe(int id, string name, string category, string ingredients, string description)
+        public Recipe( string name, string category, string ingredients, string description)
         {
-            Id = id;
             Name = name;
             Category = category;
             Ingredients = ingredients;
