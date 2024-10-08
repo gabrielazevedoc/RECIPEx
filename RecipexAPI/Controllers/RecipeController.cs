@@ -13,7 +13,7 @@ public class RecipeController : ControllerBase
     {
         _context = context;
     }
-
+    
     // GET: api/Recipe
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipes()
@@ -92,9 +92,10 @@ public class RecipeController : ControllerBase
         return NoContent();
     }
 
-    [HttpGet("category/{category}")]
+    [HttpGet("/category/{category}")]
     public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipesByCategory(string category)
     {
+       
         var recipes = await _context.Recipes
                                     .Where(r => r.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
                                     .ToListAsync();
