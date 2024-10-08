@@ -26,6 +26,11 @@ const RecipeService = {
 
     deleteRecipe: async (id) => {
         await axios.delete(`${API_URL}/${id}`);
+    },
+
+    getRecipesByCategory: async (category) => {
+        const response = await axios.get(`${API_URL}/category/${category}`);
+        return response.data;
     }
 };
 

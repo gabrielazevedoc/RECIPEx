@@ -92,6 +92,21 @@ public class RecipeController : ControllerBase
         return NoContent();
     }
 
+    [HttpGet("category/{category}")]
+    public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipesByCategory(string category)
+    {
+        var recipes = await _context.Recipes
+                                    .Where(r => r.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
+                                    .ToListAsync();
+
+        if (!recipes.Any())
+        {
+            return NotFound();
+        }
+
+        return recipes;
+    }
+
     private bool RecipeExists(int id)
     {
         return _context.Recipes.Any(e => e.Id == id);
