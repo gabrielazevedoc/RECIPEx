@@ -18,9 +18,10 @@ public class RecipeController : ControllerBase
     public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipesByCategory(string category)
     {
        
-        var recipes = await _context.Recipes
-                                    .Where(r => r.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
-                                    .ToListAsync();
+        var recipes = _context.Recipes
+    .ToList() // Load all recipes into memory
+    .Where(r => r.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
+    .ToList();
 
         if (!recipes.Any())
         {

@@ -1,23 +1,87 @@
-.recipe-list-container {
-  width: 80%;
-  margin: auto;
+$primary-color: #b91d1d; // cor principal (vermelho)
+$text-color: #333;       // cor do texto
+$card-width: 300px;      // largura fixa dos cards
+$card-border-radius: 10px;
+
+.category-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 21px;
+  align-items: center;
+  padding: 2rem;
 
-  h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 80px;
-    letter-spacing: 18px;
-    color: #383736;
+  span {
+    display: block;
+    height: 4px;
+    width: 50px;
+    background-color: $primary-color;
+    margin-bottom: 1rem;
   }
 
-  .recipe-list-cards {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: 1fr 1fr;
+  .category-recipes {
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: 'Arial', sans-serif;
+      margin-bottom: 1.5rem;
+      color: $text-color;
+    }
+
+    .recipes-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+      .recipe-card {
+        background-color: #fff;
+        width: $card-width;
+        border-radius: $card-border-radius;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+
+        .recipe-card-image {
+          background-color: #f2f2f2;
+          height: 180px;
+          border-bottom: 4px solid $primary-color;
+        }
+
+        .recipe-card-content {
+          padding: 1rem;
+          text-align: left;
+
+          h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: $text-color;
+          }
+
+          p {
+            font-size: 1rem;
+            color: grey;
+          }
+        }
+      }
+    }
   }
 }
+
+// Responsividade
+@media (max-width: 767px) {
+  .recipes-grid {
+    flex-direction: column;
+
+    .recipe-card {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .recipes-grid {
+    justify-content: space-between;
+  }
+}
+
