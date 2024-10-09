@@ -8,7 +8,7 @@ const RecipePage = () => {
   return (
     <div className="full-page-container">
       <NavBar />
-      <RecipeListCategory category="carnes" />
+      <RecipeListCategory category="Carnes" />
       <Footer />
     </div>
   )

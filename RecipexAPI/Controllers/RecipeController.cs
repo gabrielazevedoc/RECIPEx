@@ -13,7 +13,23 @@ public class RecipeController : ControllerBase
     {
         _context = context;
     }
-    
+
+    [HttpGet("category/{category}")]
+    public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipesByCategory(string category)
+    {
+       
+        var recipes = await _context.Recipes
+                                    .Where(r => r.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
+                                    .ToListAsync();
+
+        if (!recipes.Any())
+        {
+            return NotFound();
+        }
+
+        return recipes;
+    }
+
     // GET: api/Recipe
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipes()
@@ -90,22 +106,6 @@ public class RecipeController : ControllerBase
         await _context.SaveChangesAsync();
 
         return NoContent();
-    }
-
-    [HttpGet("/category/{category}")]
-    public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipesByCategory(string category)
-    {
-       
-        var recipes = await _context.Recipes
-                                    .Where(r => r.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
-                                    .ToListAsync();
-
-        if (!recipes.Any())
-        {
-            return NotFound();
-        }
-
-        return recipes;
     }
 
     private bool RecipeExists(int id)
