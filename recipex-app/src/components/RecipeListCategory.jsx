@@ -33,20 +33,23 @@ const RecipeListCategory = ({category}) => {
     }
 
     return(
-      <div className="category-recipes">
-            <h2>{category}</h2>
-            <div className="recipes-grid">
-                {recipes.map((recipe) => (
-                    <div key={recipe.id} className="recipe-card">
-                        <div className="recipe-card-image" />
-                        <div className="recipe-card-content">
-                            <h3>{recipe.name}</h3>
-                            <p>{recipe.description}</p>
+      <div className="category-box">
+        <span></span>
+          <div className="category-recipes">
+                <h2>{category}</h2>
+                <div className="recipes-grid">
+                    {recipes.map((recipe) => (
+                        <div key={recipe.id} className="recipe-card">
+                            <div className="recipe-card-image" />
+                            <div className="recipe-card-content">
+                                <h3>{recipe.name}</h3>
+                                <p>{recipe.description}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+      </div>
     )
 }
 
